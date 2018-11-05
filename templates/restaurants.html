@@ -1,1 +1,29 @@
-<html><body>This page will show all my restaurants</body></html>
+<html>
+  <body>
+
+  <h1>This page will show all my restaurants</h1>
+
+     <a href= '{{url_for('newRestaurants')}}'>Create new</a></br></br>
+
+    {% for i in restaurants %}
+
+    <div>
+
+    <h2>{{i.name}}</h2>
+
+    <a href= '#'>See menu</a></br>
+
+    <a href= '#'>edit</a></br>
+
+    <a href= '#'>delete</a></br>
+
+    </br>
+    </br>
+
+    </div>
+
+
+    {% endfor %}
+
+</body>
+</html>
