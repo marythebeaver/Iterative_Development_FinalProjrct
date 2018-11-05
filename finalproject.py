@@ -19,13 +19,15 @@ item = {'name': 'Cheese Pizza', 'description': 'made with fresh cheese',
 @app.route('/')
 @app.route('/restaurants')
 def showRestaurants():
-    #message="<html><body>This page will show all my restaurants</body></html>"
+
+
     return render_template('restaurants.html', restaurants = restaurants)
 
 
 @app.route('/restaurant/new')
 def newRestaurants():
-    #message="<html><body>This page will be for making a new one</body></html>"
+
+    
     return render_template('newRestaurant.html')
 
 
