@@ -1,1 +1,25 @@
-<html><body>This page is for editng menu item %s</body></html>
+<html>
+<body>
+
+<form action= "#" method = '#'>
+
+<h1>Edit Item of {{restaurant.name}}</h1>
+<p>Name:</p>
+<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'></br>
+
+<p>Course:</p>
+<input type = 'text' size='30' name = 'course' placeholder = '{{item.course}}'></br>
+
+<p>Description:</p>
+<input type = 'text' size='30' name = 'description' placeholder = '{{item.description}}'></br>
+
+<p>Price:</p>
+<input type = 'text' size='30' name = 'price' placeholder = '{{item.price}}'></br></br>
+
+<input type='submit' value='Edit'>
+</form>
+<a href= '{{url_for('showRestaurants')}}'>Cancel</a>
+
+
+</body>
+</html>

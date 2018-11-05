@@ -55,15 +55,16 @@ def showMenu(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/menu/new')
 def newMenuItem(restaurant_id):
-    
+
 
     return render_template('newMenuItem.html', restaurant = restaurant)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit')
 def editMenuItem(restaurant_id,menu_id):
-    #message="<html><body>This page is for editng menu item %s</body></html>" %menu_id
-    return render_template('editMenuItem.html')
+
+
+    return render_template('editMenuItem.html', restaurant = restaurant, item = item)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete')
