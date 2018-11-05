@@ -18,20 +18,22 @@ def remove_session(ex=None):
 @app.route('/')
 @app.route('/restaurants')
 def showRestaurants():
-    restaurants = ''
     restaurants = session.query(Restaurant).all()
-
-
     return render_template('restaurants.html', restaurants = restaurants)
 
 
-@app.route('/restaurant/new')
+@app.route('/restaurant/new', methods = ['GET','POST'])
 def newRestaurants():
+    if request.method == 'POST':
+        newRestaurant = Restaurant(name=request.form['name'])
+        session.add(newRestaurant)
+        session.commit()
+        return redirect(url_for('showRestaurants'))
+
+    else:
+        return render_template('newRestaurant.html')
 
 
-    return render_template('newRestaurant.html')
-
-'''
 @app.route('/restaurant/<int:restaurant_id>/edit')
 def editRestaurants(restaurant_id):
 
@@ -73,7 +75,7 @@ def deleteMenuItem(restaurant_id,menu_id):
 
 
     return render_template('deleteMenuItem.html', restaurant = restaurant, item = item)
-'''
+
 
 
 
