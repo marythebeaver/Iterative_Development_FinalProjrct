@@ -18,6 +18,8 @@ def remove_session(ex=None):
 @app.route('/')
 @app.route('/restaurants')
 def showRestaurants():
+    restaurants = ''
+    restaurants = session.query(Restaurant).all()
 
 
     return render_template('restaurants.html', restaurants = restaurants)
@@ -29,7 +31,7 @@ def newRestaurants():
 
     return render_template('newRestaurant.html')
 
-
+'''
 @app.route('/restaurant/<int:restaurant_id>/edit')
 def editRestaurants(restaurant_id):
 
@@ -71,7 +73,7 @@ def deleteMenuItem(restaurant_id,menu_id):
 
 
     return render_template('deleteMenuItem.html', restaurant = restaurant, item = item)
-
+'''
 
 
 
