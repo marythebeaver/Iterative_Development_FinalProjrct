@@ -1,1 +1,27 @@
-<html><body>This page is the menu for restaurant %s</body></html>
+<html>
+<body>
+
+<h1>Menu for {{restaurant.name}} </h1>
+
+<a href= '#'>Create new</a></br></br>
+
+{% for i in items %}
+
+<div>
+
+<h2>{{i.name}}</h2>
+
+<p>{{i.description}}</p>
+
+<p> {{i.price}} </p>
+
+<a href='#'>Edit</a>
+
+</br>
+<a href = '#'>Delete</a>
+</br>
+</br>
+{% endfor %}
+
+</body>
+</html>

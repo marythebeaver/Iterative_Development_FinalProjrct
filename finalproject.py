@@ -40,15 +40,17 @@ def editRestaurants(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/delete')
 def deleteRestaurants(restaurant_id):
-    #message="<html><body>This page will be for deleting restaurant %s</body></html>" %restaurant_id
+
+
     return render_template('deleteRestaurant.html', restaurant = restaurant)
 
 
 @app.route('/restaurant/<int:restaurant_id>')
 @app.route('/restaurant/<int:restaurant_id>/menu')
 def showMenu(restaurant_id):
-    #message="<html><body>This page is the menu for restaurant %s</body></html>" %restaurant_id
-    return render_template('menu.html')
+
+    
+    return render_template('menu.html', restaurant = restaurant, items = items)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/new')
