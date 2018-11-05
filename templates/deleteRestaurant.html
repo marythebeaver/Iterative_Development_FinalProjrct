@@ -1,1 +1,12 @@
-<html><body>This page will be for deleting restaurant %s</body></html>
+<html>
+<body>
+<form action= "#" method = '#'>
+
+<p>Are you sure you want to delete {{restaurant.name}} ?</p>
+
+<input type='submit' value='Yes'>
+</form>
+<a href= '{{url_for('showRestaurants')}}'>Cancel</a>
+
+</body>
+</html>
