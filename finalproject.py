@@ -64,9 +64,9 @@ def deleteRestaurants(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>')
 @app.route('/restaurant/<int:restaurant_id>/menu')
 def showMenu(restaurant_id):
-
-
-    return render_template('menu.html', restaurant = restaurant, items = items)
+    items = session.query(MenuItem).filter_by(restaurant_id=restaurant_id).all()
+    restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
+    return render_template('menu.html', restaurant_id = restaurant_id, items = items, restaurant = restaurant)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/new')
