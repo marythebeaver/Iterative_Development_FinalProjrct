@@ -1,1 +1,13 @@
-<html><body>This page is for deleting menu item %s</body></html>
+<html>
+<body>
+<form action= "#" method = '#'>
+
+<h1>Delete Item of {{restaurant.name}} </h1>
+<p>Are you sure you want to delete {{item.name}}?</p>
+
+<input type='submit' value='Yes'>
+</form>
+<a href= '{{url_for('showRestaurants')}}'>Cancel</a>
+
+</body>
+</html>
