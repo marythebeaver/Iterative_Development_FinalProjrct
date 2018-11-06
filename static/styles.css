@@ -1,0 +1,85 @@
+/*background color*/
+body {
+    font-family: sans-serif;
+    background-color: #666633
+}
+
+/*restaurant name*/
+h1 { color: #ffffff;
+}
+
+h2 { color: #cccc00;
+
+}
+
+/*restaurant name*/
+h1 {
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'serif', serif;
+    margin: 0;
+}
+
+/*bottomline under the restauraunt name*/
+h1 {
+    border-bottom: 2px solid #eee;
+}
+
+/*?? FOUND NOTHING*/
+/*h2 {
+    font-size: 1.2em;
+}
+*/
+
+/*only use p, no dd and dt tag: item name, prices, description*/
+p,
+dd,
+dt {
+    color: #333300;
+}
+
+/*links*/
+a {
+    text-decoration: none;
+    color: #4d3300;
+    font-size: 0.9em;
+}
+
+.pane {
+    position: absolute;
+    left: 25%;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #4d1933;
+    background-color: #4d1933
+}
+
+.header {
+    left: 50%;
+    text-align: center;
+}
+
+.name {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.description {}
+
+.price {
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+.editdeletepane {}
+
+.flash {
+    background: #ffffff;
+}

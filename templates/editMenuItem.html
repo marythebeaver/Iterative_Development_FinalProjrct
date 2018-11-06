@@ -1,26 +1,29 @@
 <html>
-<body>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'styles.css')}}">
+  </head>
+    <body>
 
-<form action= "{{url_for('editMenuItem', restaurant = restaurant, item = item, restaurant_id=restaurant_id, menu_id=menu_id)}}" method = 'POST'>
+    <form action= "{{url_for('editMenuItem', restaurant = restaurant, item = item, restaurant_id=restaurant_id, menu_id=menu_id)}}" method = 'POST'>
 
-<h1>Edit Item of {{restaurant.name}}</h1>
-<p>Name:</p>
-<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'></br>
+    <h1>Edit Item of {{restaurant.name}}</h1>
+    <p>Name:</p>
+    <input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'></br>
 
-<p>Course:</p>
-<input type = 'text' size='30' name = 'course' placeholder = '{{item.course}}'></br>
+    <p>Course:</p>
+    <input type = 'text' size='30' name = 'course' placeholder = '{{item.course}}'></br>
 
-<p>Description:</p>
-<input type = 'text' size='30' name = 'description' placeholder = '{{item.description}}'></br>
+    <p>Description:</p>
+    <input type = 'text' size='30' name = 'description' placeholder = '{{item.description}}'></br>
 
-<p>Price:</p>
-<input type = 'text' size='30' name = 'price' placeholder = '{{item.price}}'></br></br>
+    <p>Price:</p>
+    <input type = 'text' size='30' name = 'price' placeholder = '{{item.price}}'></br></br>
 
-<input type='submit' value='Edit'>
-</form>
+    <input type='submit' value='Edit'>
+    </form>
 
-<a href= '{{url_for('showMenu', restaurant_id=restaurant_id)}}'>Cancel</a>
+    <a href= '{{url_for('showMenu', restaurant_id=restaurant_id)}}'>Cancel</a>
 
 
-</body>
+    </body>
 </html>
